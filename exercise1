@@ -1,0 +1,8 @@
+var numJewelsInStones = function (J, S) {
+  return [...J].reduce((ac, j) => ac + (S.match(RegExp(j)) || []).length, 0)
+}
+
+console.log( "'aA', 'aAAbbbb' ==>", numJewelsInStones('aA', 'aAAbbbb'))
+console.log( "'x', 'XX' ==>", numJewelsInStones('x', 'XX'))
+
+
